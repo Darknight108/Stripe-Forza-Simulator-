@@ -1,0 +1,185 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fondo general */
+body {
+  background-color: #1a1a1a;  /* Fondo oscuro */
+  color: #f9f9f9;  /* Texto claro */
+  line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+  background-color: #333; /* Fondo oscuro para el header */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  height: 60px;  /* Ajusta el tamaño del logo */
+  width: auto;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav li {
+  margin-left: 20px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #f9f9f9; /* Texto claro */
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #FF6A13; /* Naranja para hover */
+}
+
+/* Sección de productos */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Ajustar para dispositivos */
+  gap: 20px;
+  padding: 2rem;
+}
+
+.product-card {
+  background-color: #2e2e2e; /* Fondo oscuro para los productos */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05); /* Efecto zoom en la imagen */
+}
+
+.product-info {
+  padding: 1rem;
+}
+
+.product-name {
+  font-size: 1.5rem;
+  color: #f9f9f9;
+  margin-bottom: 10px;
+}
+
+.buy-button {
+  background-color: #FF6A13; /* Naranja para los botones */
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #e65c00;  /* Naranja oscuro */
+}
+
+/* Footer */
+footer {
+  background-color: #333; /* Fondo oscuro para el pie de página */
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  color: #f9f9f9;
+}
+
+/* Efecto fade-in para las secciones */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+/* Mejoras para dispositivos móviles */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* Ajuste en pantallas pequeñas */
+  }
+
+  .buy-button {
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+/* Centrar el contenido */
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  /* Ocupa toda la altura de la pantalla */
+  text-align: center;
+  background-color: #1a1a1a;  /* Fondo oscuro */
+}
+
+/* Estilo para la tarjeta */
+.message-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+}
+
+.message-card h2 {
+  font-size: 2rem;
+  color: #FF6A13;  /* Naranja para el mensaje */
+  margin-bottom: 1rem;
+}
+
+.message-card p {
+  font-size: 1.2rem;
+  color: #020101;
+  margin-bottom: 2rem;
+}
+
+.buy-button {
+  background-color: #FF6A13;
+  color: #040404;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #e65c00;  /* Naranja oscuro */
+}
